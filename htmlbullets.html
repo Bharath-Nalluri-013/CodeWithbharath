@@ -1,0 +1,172 @@
+<html>
+    <head>this is the header of our page
+        <title>HTML with Bharath!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="icon.jpg" />
+    </head>
+    <body>
+        <h1>HTML BULLETS</h1>
+        <h1> 1.ON THE HEADER TAGS!</h1>
+        
+        <P>This is just the beginning of my practice, we'll go more reactive and responsive over the courses.</P>
+        <b>1.a.Meta tags</b>
+        <p>Meta tag - in html, meta tag describes what your website is about i.e gives info about your page!<br><br>
+            the syntax 1  is < meta name = ' ' content = " >(btw this does not have a closing tag) this what loads down to your website url on google! " description --> you can add multiple names and contents in meta tag to describe your website more in detail. <br><br>
+            the syntax 2 is < meta charset=" utf-8"> just tells us what characters are being used! <br><br>
+            the syntax 3 is < meta name= "robots" content="(no)index,(no)follow" > helps the webcrawler to index your webpage on the search and follow helps crawler to follow all the links in your website. <br><br>
+            imp syntax 4 is < meta name ="viewport" content="width=device-width, initial-scale=1"> allows to view your site on device used perfectly.<br>
+        </p>
+        <b>1.b.Change icon on browser tab</b>
+        <p>< link rel= "icon" href="" > is used in head tags usually </p>
+        <h1>2.ON BODY TAGS!</h1>
+        <p>1.< img src="" alt="" height="" width=""> <br> <br>
+            2.a.< video> height= "" width = "" src="" < /video> (we dont use alt attribure in video tag! ) <br> <br>
+            2.b. If you have multiple sources i.e you dont know exactly the type of video,<br>
+            < video height="" width=""> 
+            < source src="" type="video/mp4">
+            < source src="" type="video/obb">
+            < source src="" type="video/gif">
+            < /video>
+            <br> <br>
+            3.< a target="_blank" href="" >text goes here < /a><br>
+            You can add image in place of text in anchor tag by nesting img tag in anchor tag! <br>
+            < a href="" download >< /a> allows to download when the user clicks on the hyperlink. <br> <br>
+
+            4.Forms <br>
+            < form ><br>
+            < label for="id1">input1 < /label> <br>
+            < input required type="textemailpassword" id="id1" maxlength="" minlength="" /><br>
+            spellcheck="trueorfalse" attribute in input tag helps to check the spelling of the input entered. <br>
+            Its important to have label tag above input tag <br>
+            < button type="submit">submit< /button><br>
+            < /form> <br> <br>
+            5.DropDown <br>
+            < select name="" id="" ><br>
+            < option value="val1"> OPt1< /option> (when form is submitted value of option1 is selected, not opt1,, name is give on select tag!)<br>
+            < option> OPt2< /option> <br>
+            < option> OPt3< /option> <br>
+            < /select><br>
+            6.Radio Buttons <br>
+            < input type="radio" name="productslist" value="product1"> <br>
+            < input type="radio" name="productslist" value="product2"> <br>
+            < input type="radio" name="productslist" value="product3"> <br>
+            You can see the name of the options available is same but the value of the options change and thats what gets submitted! <br> <br>
+            7.Lists<br>
+            7.a.UnOrdered Lists   - gives us a .<br>
+            < ul> <br>
+            < li> item 1< /li>(list item)<br>
+            < li> item 2< /li>
+             < /ul> <br>
+             
+
+            7.b.Ordered List <br>
+            < ol> <br>
+            < ol>Chapter 1 <br>
+            < li>C1S1< /li> <br>
+            < li>C!S2< /li> <br>
+            < /ol> <br>
+            
+            < /ol> <br>
+            You can also add anchor tag in listitem. <br>
+            <br>
+            8.Tables
+            < table> 
+            < tr > <br>
+            < th> </ th> <br>
+            < th> </ th> <br> 
+            < th> </ th> <br>
+            < /tr> <br> 
+            < tr> <br>
+                < td></ td> <br>
+                < td></ td> <br>
+                < td></ td> <br>
+            </ tr> <br>
+            < tr> <br>
+                < td></ td> <br>
+                < td></ td> <br>
+                < td></ td> <br>
+            </ tr> <br>
+            < /table>
+            output table:
+            <table>
+                <tr>
+                    <th>Cycle</th>
+                    <th>Season</th>
+                    <th>Month</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+            </table> <br> <br>
+             9.Id and classes <br>
+             ID has to be unique but class can be named to multiple tags for ease in css and js manipulation. 
+             <br> <br>
+             10.Div and Span Tags(Non-Semantic Elements) <br>
+             These does not describe anything about the content.
+             <br>Span is an inline element. <br>
+             Eg: My name is < span id="" class=""> Bharath< /span> --> you can just change style of a word in a line by using span by not changing style of the complete line.
+             <br>
+             DIV is a block level element that always starts in a new line. This takes full width available on the screen(from extreme left to possible right).
+             <br>
+             Div can be considered as a container in which you can have some content.
+             <br>
+             usually Div and span will have attributes: style, id, class
+             <br> <br>
+             11.Semantic Elements.
+            <br>These clearly define meaning to the browser and the developer. eg: forms, tables, articles...
+            <br>Usually developers used to use < div id="header" id="nav" id=" footer"> to describe header, footer and navigation sections. But using semantic elemets, you can have header footer nav without a div element.
+            <br>Some of the important semantic elements used are listed below.
+            <br> <table>
+                <tr>
+                    <th>Element Name</th>
+                    <th>use of the element</th>
+                </tr>
+                <tr>
+                    <td>Section</td>
+                    <td>Used for grouping of content that has a heading! <br>Eg.Chapters, Contact Info..etc</td>
+                </tr>
+                <tr>
+                    <td>Article</td>
+                    <td>Independent, self-contatined content <br>Eg.Blogs, Newspaper content, Forums</td>
+                </tr>
+                <tr>
+                    <td>Nav</td>
+                    <td>All the navigation links can be placed under nav tag</td>
+                </tr>
+                <tr>
+                    <td>Footer</td>
+                    <td>All the footer elements</td>
+                </tr>
+                <tr>
+                    <td>Header</td>
+                    <td>All the header elements</td>
+                </tr>
+            </table>
+            <br><br>
+            12.HTML Entities.
+            <br>You can not use reserved keywords like < > as it will be considered as a tag in html by browser. So, you need some entities to use the resevered characters in your text.
+            <br>    
+            space- & nbsp ; <br>
+            < - & lt ; <br> 
+            >-& gt ; <br>
+             &(ampersand)-& amp ; <br>
+              '(singlequotaion/apostrophe)-& apos ; <br> 
+               "(double quoation) - & quot ;  <br>
+               <br>
+            <section class="additionalBullets">
+            <h1>Other Bullet Points</h1>
+            1.&lt;input type="file" accept=".jpeg .raw"&gt; allows user to input only .jepg ad .raw files. <br>
+            2.&lt;p translate="no"&gt;Dont translate this&gt; Doesnot translate the text inside this p tag.
+            </section>
+
+
+        </p>
+
+</html>
