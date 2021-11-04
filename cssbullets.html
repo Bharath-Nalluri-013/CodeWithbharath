@@ -1,1 +1,201 @@
-Yet to come, stay tuned!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS with Bharath</title>
+  </head>
+  <body>
+    <header>
+      <u><h1>CASCADING STYLE SHEETS(CSS) BULLETS</h1></u>
+      <h2><a href="index.html">HomePage</a></h2>
+    </header>
+    <main>
+      <section class="index">
+        There are three ways you can style a html document.
+        <ol>
+          <li>
+            <span>In-line CSS</span> - Styling is done inside the tag by passing
+            attributes
+          </li>
+          <li>
+            <span>Internal/Embedded CSS</span> - &lt;style&gt; &lt;/style&gt;
+            tag is added seperately in the html doc and styling will be written.
+          </li>
+          <li>
+            <span>External CSS</span> - Seperate .css file is created and is
+            linked in head tag by &lt;link rel="stylesheet" href=""&gt;
+          </li>
+        </ol>
+        Most commonly used way to style a html is <b>External CSS.</b>
+        <br /><br />
+        <hr />
+      </section>
+      <section class="selectors">
+        <h2 class="side-heading">Selectors</h2>
+        <table>
+          <tr>
+            <th>Selector</th>
+            <th style="text-align: left">Syntax</th>
+            <th>Other Comments</th>
+          </tr>
+          <tr>
+            <td>Element</td>
+            <td>Tag name <br />p,h1...</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td>.</td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>Universal Selector(all elements)</td>
+            <td>&amp;</td>
+          </tr>
+          <tr>
+            <td>Element.Classname</td>
+            <td>
+              tag/elementname.classname(Selects an element with particular
+              class.)
+              <br />p.classname
+            </td>
+            <td>
+              Can be used in vice-versa i.e. classnamespacep selects all the
+              paragraphs with specified class.
+            </td>
+          </tr>
+          <tr>
+            <td>Element,Element</td>
+            <td>elename,elename <br />eg: div,p</td>
+          </tr>
+        </table>
+        <hr />
+      </section>
+      <p>
+        <u>Specificity order in CSS</u>: element &lt; class &lt; ID &lt; In-Line
+        Styling(&lt;!important)
+      </p>
+      <p>
+        If you have 2 same selectors in css say class and class, the class which
+        is last will style. Because css works from top to bottom!
+      </p>
+      <hr />
+
+      <section id="borders">
+        <h2 class="side-heading">Borders</h2>
+        <p>This will specify Style, Width and Color of an elements border.</p>
+        <br />
+        <u>Border Properties</u> <br />
+        <ul class="border">
+          <li>
+            border-style: solid, dotted, dashed, double, groove, ridge, inset,
+            outset, none, hidden <br />*Unless you select a border, other border
+            properties can not be seen.
+          </li>
+          <li>
+            border-width: Similar to margins and paddings, you can give width on
+            every side you want. <br />Eg: border-width=50px 30px 30px 50px
+            which is top 50, right 30, bottom 30, keft 50.
+          </li>
+          <li>
+            border-color: Set color to your border. border-color:red; <br />You
+            can also have particular color on each side of the border.&nbsp;
+            &lt;border-color:red(top) blue(right) green(bottom) yellow(left)&gt;
+            <br />
+            border-whichside(TRBL)-style:solid/dotted/... allows you to have
+            specific style on the sides of the border. &nbsp;
+            &lt;border-right-style:dotted&nbsp;border-top-style:solid;
+          </li>
+          <li>
+            SHORTHAND OF ABOVE 3 PROPERTIES: <br />border: width style color;
+          </li>
+          <li>
+            Border Radious: To change the edges of the border.
+            <br />border-radious=5px;
+          </li>
+        </ul>
+      </section>
+      <hr />
+
+      <section id="marginsandpaddings">
+        <h2 class="side-heading">Padding and Margin</h2>
+        <p>
+          Usually, when an element is created, padding and margins are applied
+          by default. <br />Margin is the spacing that is applied outside the
+          element where as padding is the spacing that is applied on the
+          element.
+        </p>
+        <p>
+          <u>Styling Margins and paddings:</u> <br />
+          element{<br />
+          padding:50px 0px;&nbsp;-This adds 50 on the top, 50 on the bottom and
+          0 on the left, 0 on the right! (OR)<br />
+          padding:50px 10px 45px 5px;&nbsp;-This adds 50 on the top, 45 on the
+          bottom and 5 on the left, 10 on the right! <br />
+          (When 4 values are present,1st value starts from top and turns
+          clock-wise.) You can also have negative values to move the text
+          further! :)}
+        </p>
+      </section>
+      <hr />
+      <section id="the-box-model">
+        <h2 class="side-heading">The Box-Model</h2>
+        <br />
+        By default, every element on the browser will have paddings and margins
+        as discussed above. Similarly browser also has some padding and margin.
+        <br />
+        Consider you want to increase width of an article by 300px, when you do
+        it by width=300px, the width overflows in the browser and gives user a
+        scroller to move right. <br />
+        So fix this issue start css by following syntax. <br />
+        *{ <br />
+        margin: 0; <br />
+        padding: 0; <br />
+        box-sizing: border-box; <br />
+        } <br />
+        When you put this in your css, you need to customize every element from
+        scartch since we've removed pre-applied css for the browser. <br />
+        <div id="h-w-formula">
+          Exact way to calculate height and width of an element is: <br />
+          Total width of an element=width + left padding + right padding + left
+          border + right border + left margin + right margin <br />
+          Total height of an element=height + top padding + bottom padding + top
+          border + bottom border + top margin + bottom margin <br />
+        </div>
+      </section>
+      <hr />
+      <section class="pixels-em-rem">
+        <h2 class="side-heading">pixels-em-rem</h2>
+        <p>
+          It is good to use pixels, but the problem when you assign some pixels
+          to an element is, they does not change even when we try to change in
+          browser font settings.
+        </p>
+        Instead using em and rem will help user change font settings from the
+        browser. <br />
+        <u>Using em:</u>By default, all the html elements size is 16px. when you
+        use em=1 it means 1x16px since html is the parent element.
+        <br />Similiary when em=2 it is 2x16. If you have multiple parent
+        elements for an element, em muultiplies all the parent elements pixels
+        too. <br />
+        For example, parents are html,header,h1 with each having 2em each
+        respectively. If the child element is p with em=3, it means that the
+        size will be 3x2x2x2x16px. Which is very huge font.
+        <br />So this avoid this parent font size inheretance, we use "rem". Rem
+        does not inherit anything from its parents except html. <br /><u
+          >Using rem:</u
+        >As we know html font-size is 16px, 1rem=16px. To have 24px,
+        1.5rem=24px. <br />To avoid this confusing calculation of rem to pixels,
+        <b><i>Change the html font-size=62.5%</i> so that 1rem=10px.</b
+        >25px=2.5rem. This will ease our calculation.
+      </section>
+
+      <hr />
+    </main>
+  </body>
+</html>
