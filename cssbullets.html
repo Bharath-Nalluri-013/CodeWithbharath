@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-      <link rel="icon" href="b-icon.png" />
+    <link rel="icon" href="b-icon.png" />
     <title>CSS with Bharath</title>
   </head>
   <body>
@@ -95,8 +95,8 @@
         <ul class="border">
           <li>
             border-style: solid, dotted, dashed, double, groove, ridge, inset,
-            outset, none, hidden <br />*Unless you select a border, other border
-            properties can not be seen.
+            outset, none, hidden <br />*Unless you select a border-style, other
+            border properties can not be seen.
           </li>
           <li>
             border-width: Similar to margins and paddings, you can give width on
@@ -194,6 +194,143 @@
         1.5rem=24px. <br />To avoid this confusing calculation of rem to pixels,
         <b><i>Change the html font-size=62.5%</i> so that 1rem=10px.</b
         >25px=2.5rem. This will ease our calculation.
+      </section>
+      <section id="styling-a-button">
+        CSS Code for styling a button is shown in below text area! <br />
+        <textarea
+          name="csscode-to-style"
+          id="css-button-styling"
+          cols="25"
+          rows="10"
+        >
+          html{
+            font-size: 62.5%;
+          }
+          #test-button{
+            padding: 2rem;
+            margin: 10rem;
+            background: none;
+            border: 0.4rem dotted blue;
+            cursor:pointer;
+          }
+        </textarea>
+      </section>
+      <hr />
+      <section id="inline-block-elements">
+        <h2 class="side-heading">In-line and block elements in CSS</h2>
+        <p>
+          You can't add height and width to an inline elements.<br />
+          If you add margin or padding to an inline element, only left and right
+          margin applies not the top and bottom one! <br />
+          When you add multiple inline elements, everything is gonna be on the
+          same line.
+        </p>
+        To fix this,
+        <ul class="content-class">
+          <li>
+            you can add a css: display:block;&nbsp;This will stack all the
+            inline elements downwards.
+          </li>
+          <li>
+            Or if you want them on the same line but you want to add margins and
+            paddigs, the css will be: <br />
+            display:inline-block; &nbsp;the combination of inline and block.
+          </li>
+          <li>display:none; disappears element on the page</li>
+          <li>
+            *display:flex/inline-flex; is flexible to change inline to block and
+            block to inline. <br />When you use flex, you use
+            justify-content:right/left/center(works similar to text-alignment).
+          </li>
+        </ul>
+        <br />
+      </section>
+      <section class="flex-box">
+        <h2 class="side-heading"></h2>
+        <p>
+          To convert block level elements to inline, use display:flex. When you
+          add display:flex to a parent element, all its child elements become
+          flexible items.
+        </p>
+        <p>
+          By default, when display flex is used, items as alligned in x-axis, to
+          change it to y-axis, use flex-direction:row/column.
+        </p>
+        <p>
+          when display:flex, you can use <br>
+           justify-content:
+          center/flex-start/flex-end <br />justify-content:space-around,
+          add space to items on all sides. <br />justify-content:space-between
+          adds space between items equally. <br />
+          When you have multiple items on a flex container, you can use: <br>
+            <p>align-items:center/flex-start/flex-end/stretch(fills in the conrainer)/;</p> <br>
+            <p>align-content:center/stretch/space-between/space-around/flex-end/flex-start</p>
+            <p>To Perfectly center a item, use both justify-content and align-items to center</p>
+            <p>Align items vs justify content: AI works vertically, JC works horizontally.</p>
+            <p>If you wish to interchange items in its position, say 1st flex box on 3rd, 3rd on 2nd and so forth, <br> use order:num; where num is the position you want to change to. </p>
+             <p>Flex-basis:%; works similar to width.</p>
+             <p>flex-wrap:no-wrap/wrap -> Wwraps the content to the next line if browser size gets reduced!
+             </p>
+        
+        </p>
+      </section>
+      <hr />
+      <section class="pseudo-class-elements">
+        <h2 class="side-heading">Pseduo Classes and Elements</h2>
+        <div class="pseduo-class">
+          <h5><u>Pseduo Class</u></h5>
+          This defines a special state of an element. <br />
+          Syntax: selector:pseudo-class{property:value;} <br />
+          <br />
+          For buttons divs and p: <br />
+          btn:hover{ background:blue;} <br />
+          <br />
+          For links: <br />
+          a:link(for a link) a:visited(for links opened) <br />
+          <br />
+          For inputs (mainly): <br />
+          inp:focus{background:blue;} <br />
+          Tooltip Hover: Used when you use display:none for a block and when you
+          hover on it, block will be displayed.
+          <br />
+          <textarea name="tooltiphover" id="tooltiphover" cols="20" rows="10">
+            div hover on this to display a block 
+             p hey I am here
+            css : div:hover p{ display:block;}
+          </textarea>
+        </div>
+        <div class="pseduo-element">
+          <h5><u>Pseduo Element</u></h5>
+        </div>
+      </section>
+      <section class="other-properties">
+        <h2 class="side-heading">Other CSS Properties</h2>
+        <ol class="other-properties">
+          <li>
+            text-align:justify;-Everyline will have equal width and left and
+            right margins are straight. Just like in news papers.
+          </li>
+          <li>
+            text-decoration:none,overline(above the
+            text),underline,line-through(on the line); - usually used to remove
+            underlines from anchor tag.
+          </li>
+          <li>text-tranform:uppercase,lowercase,capitalize;</li>
+          <li>
+            text-indent:50px;-used to add space at the start of a paragraph
+          </li>
+          <li>
+            text-shadow: 2px 2px;(h,v) <br />
+            text-shadow: 2px 2px 5px(h,v,blureffect) <br />
+            text-shadow: 2px 2px 5px red;(horiz,vert,blureffect,color)
+          </li>
+          <li>
+            letter-spacing/word-spacing:5px or -5px; to add gap b/w letters of a
+            word or words.
+          </li>
+          <li>line-height:5px or -5px; add gap b/w lines of a paragraph.</li>
+          <li>whitespace:nowrap;-never brings text of a para to a new line.</li>
+        </ol>
       </section>
 
       <hr />

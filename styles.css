@@ -1,6 +1,10 @@
 * {
   background-color: rgb(198, 240, 240);
   box-sizing: border-box;
+  
+}
+html{
+  font-family: Arial, sans-serif;
 }
 
 header h1 {
@@ -29,6 +33,12 @@ header h2 {
   margin-top: -30px;
   color: rgb(41, 243, 0);
 }
-.index{
-  margin-top:50px;
+.index {
+  margin-top: 50px;
+}
+.content-class {
+  margin-top: -0.1rem;
+}
+.content-class li {
+  list-style: lower-roman;
 }
